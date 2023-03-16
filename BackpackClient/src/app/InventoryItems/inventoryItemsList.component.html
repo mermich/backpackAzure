@@ -1,0 +1,28 @@
+<p *ngIf="!inventoryItems"><em>Loading...</em></p>
+
+<div *ngIf="inventoryItems">
+    <div style="min-width: 500px;">
+        <div class="card-content">
+            <span class="card-title">inventoryItems</span>
+            <br><br><br><br>
+            <table class='table table-striped highlight' aria-labelledby="tableLabel">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>name</th>
+                  <th>description</th>
+                  <th>inTheBag</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let inventoryItem of inventoryItems">
+                  <td>{{ inventoryItem.id }}</td>
+                  <td>{{ inventoryItem.name }}</td>
+                  <td>{{ inventoryItem.description }}</td>
+                  <td>{{ inventoryItem.inTheBag }}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>

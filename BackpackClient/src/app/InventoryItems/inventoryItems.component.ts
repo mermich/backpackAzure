@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { InventoryItem } from './inventoryItems';
+import { InventoryItem } from '../inventoryItem';
 
 @Component({
   selector: 'InventoryItemsList',
@@ -11,7 +10,7 @@ import { InventoryItem } from './inventoryItems';
 export class InventoryItemsListComponent implements OnInit {
   public inventoryItems: InventoryItem[] | undefined;
 
-  constructor(private httpClient: HttpClient, private router: Router) { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     console.log('InventoryItemsListComponent');

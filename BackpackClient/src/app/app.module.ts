@@ -4,15 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InventoryItemsListComponent } from './InventoryItems/inventoryItems.component';
+import { InventoryItemsAdd } from './InventoryItemsAdd/inventoryItemsAdd';
+import { InventoryItemsList } from './InventoryItemsList/InventoryItemsList';
+import { InventoryItemsEdit } from './InventoryItemsEdit/InventoryItemsEdit';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InventoryItemsListComponent
+    InventoryItemsList,
+    InventoryItemsEdit,
+    InventoryItemsAdd
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

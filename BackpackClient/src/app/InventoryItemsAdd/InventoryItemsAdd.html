@@ -1,0 +1,15 @@
+<h3>Ajout d'un element dans l'inventaire</h3><br><br>
+<div class="row" *ngIf="inventoryItem">
+name:
+<input placeholder="name" id="name" type="text" [(ngModel)]="inventoryItem.name"><br>
+
+description:
+<input placeholder="description" id="description" type="text" [(ngModel)]="inventoryItem.description"><br>
+
+inTheBag:
+<input placeholder="inTheBag" id="inTheBag" type="checkbox" [(ngModel)]="inventoryItem.inTheBag"><br>
+<br>
+<a type="submit" (click)="save()">Enregistrer</a><br>
+<a [routerLink]="['/InventoryItemsList']">Annuler</a>
+
+</div>

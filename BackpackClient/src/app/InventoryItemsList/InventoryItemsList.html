@@ -1,0 +1,34 @@
+<p *ngIf="!inventoryItems"><em>Loading...</em></p>
+
+<div *ngIf="inventoryItems">
+    <div style="min-width: 500px;">
+        <div>
+            <h3>InventoryItemsList</h3>
+
+            <br><br><br>
+            <a [routerLink]="['/InventoryItemsAdd']">Ajouter un element</a><br><br>
+            <table>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Nom</th>
+                  <th>Description</th>
+                  <th>dans le sac ?</th>
+                  <th>lien vers edition</th>
+                  <th>lien de supression</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let inventoryItem of inventoryItems">
+                  <td>{{ inventoryItem.id }}</td>
+                  <td>{{ inventoryItem.name }}</td>
+                  <td>{{ inventoryItem.description }}</td>
+                  <td>{{ inventoryItem.inTheBag }}</td>
+                  <td><a [routerLink]="['/InventoryItemsEdit', inventoryItem.id]">Editer</a></td>
+                  <td>TODO</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
